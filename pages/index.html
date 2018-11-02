@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../templates/head.html')
+
+<body>
+    @@include('../templates/main_display.html')
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                // center: true,
+                items: 1,
+                loop: true,
+                autoplay: false,
+                dots: false,
+                lazyLoad: true,
+                animateOut: 'fadeOut',
+                // responsive: true,
+                // autoplayTimeout: 3000,
+                onInitialized: counter,
+                onTranslated: counter
+
+            });
+        });
+
+        function counter(event) {
+            var items     = event.item.count;
+            var item      = event.item.index - 1;
+
+            // it loop is true then reset counter from 1
+            if(item > items) {
+                item = item - items
+            }
+            setProgress(item, items);
+        }
+        $(document).on('click', '.count-progr-sec', function () {
+            var item = 1 * $('.counter .current').html() + 1;
+            var items = 1 * $('.counter .total .value').html();
+
+            if(item > items) {
+                item = item - items
+            }
+            $('.owl-nav > button.owl-next').trigger('click');
+            setProgress(item, items);
+        });
+
+        function setProgress(item, items) {
+            $('.counter').html('<span class="current">0' + item + '</span><span class="total"> / <span class="value">0' + items + '</span></span>');
+            var percent = (100) * item / items;
+            $('.progressbar').css({background: 'linear-gradient(to right, #FF0000 ' + percent + '%, #ffffff ' + percent + '%)'});
+        }
+    </script>
+</body>
+</html>

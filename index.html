@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta charset="UTF-8">
+	<title>KeyDevelopment</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<!--<link rel="stylesheet" href="/css/owl.carousel.min.css">-->
+	 <!--<link rel="stylesheet" href="/css/owl.theme.default.min.css">-->
+	<!--<link rel="stylesheet" href="/css/animate.css">-->
+	<!--<link rel="stylesheet" href="/css/owl/owl.theme.default.css">-->
+	<!--<link rel="stylesheet" href="/css/owl/owl.carousel.css">-->
+	<!--<style>-->
+		<!--@import url('https://fonts.googleapis.com/css?family=Exo:400,500');-->
+	<!--</style>-->
+	<link rel="stylesheet" href="/css/owl/owl.carousel.css">
+	<link rel="stylesheet" href="/css/owl/owl.theme.default.css">
+</head>
+
+
+<body>
+    <div class="main-display">
+    <header class="header">
+        <div class="header-content">
+            <div class="branding">
+                <figure class="logo-img">
+                    <img src="/images/logo/logo.png" alt="logo-img">
+                </figure>
+                <a href="#" class="logo-link">
+                    <img src="/images/logo/logo-link.png" alt="logo-link">
+                    <!--<span>KEY</span><br><span>development</span>-->
+                </a>
+            </div>
+            <div class="about-contacts">
+                <a href="#">О компании</a>
+                <a href="#">Контакты</a>
+            </div>
+            <div class="burger-m-language">
+                <!--burger-->
+                <div class="burger-menu">
+                    <input type="checkbox" id="check-menu">
+                    <label for="check-menu" class="burger-label">MЕНЮ</label>
+                    <nav class="navigation">
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">Shop</a>
+                        <a href="#" class="nav-link">Brands</a>
+                        <a href="#" class="nav-link">Blog</a>
+                    </nav>
+                    <div class="burger-line first-l"></div>
+                    <div class="burger-line second-l"></div>
+                    <div class="burger-line third-l"></div>
+                </div>
+                <!--end of the burger-->
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="icon-bar">
+            <div class="socials">
+                <a href="#" class="instagram">Ins</a>
+                <a href="#" class="twitter">Tw</a>
+                <a href="#" class="linkedin">In</a>
+            </div>
+        </div>
+        <div class="slider-section">
+            <div class="slider owl-carousel owl-theme">
+                <div class="owl-lazy item slide-item" data-src="images/bg/bg-main.png">
+                    <div class="item-caption">
+                        <div class="main-content">
+                            <div>Строительная Компания</div>
+                            <div class="tagline">KEY DEVELOPMENT-МЫ СМОТРИМ В БУДУЩЕЕ
+                            </div>
+                        </div>
+                        <div class="count-progr-sec">
+                            <div class="counter"></div>
+                            <div id="progressbar-1" class="progressbar">
+                                <div id="progress-line-1" class="progress-line"></div>
+                            </div>
+                            <!--<button onclick="move(event)">Click Me</button>-->
+                            <!--additional div-->
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-lazy item slide-item" data-src="images/bg/bg-main3.png">
+                    <div class="item-caption">
+                        <div class="main-content">
+                            <div>Строительная Компания</div>
+                            <div class="tagline">KEY DEVELOPMENT-МЫ СМОТРИМ В БУДУЩЕЕ
+                            </div>
+                        </div>
+                        <div class="count-progr-sec">
+                            <div class="counter"></div>
+                            <div id="progressbar-2" class="progressbar">
+                                <div id="progress-line-2" class="progress-line"></div>
+                            </div>
+                            <!--<button onclick="move(event)">Click Me</button>-->
+                        </div>
+                        <!--additional div-->
+                    </div>
+                </div>
+                <div class="owl-lazy item slide-item" data-src="images/bg/bg-main1.png">
+                    <div class="item-caption">
+                        <div class="main-content">
+                            <div>Строительная Компания</div>
+                            <div class="tagline">KEY DEVELOPMENT-МЫ СМОТРИМ В БУДУЩЕЕ
+                            </div>
+                        </div>
+                        <div class="count-progr-sec">
+                            <div class="counter"></div>
+                            <div id="progressbar-3" class="progressbar">
+                                <div id="progress-line-3" class="progress-line"></div>
+                            </div>
+                            <!--<button onclick="move(event)">Click Me</button>-->
+                        </div>
+                        <!--additional div-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="animation-block">
+            <div class="info-section">
+                <div class="first-info-part i-part">Проекты</div>
+                <div class="second-info-part i-part">204 успешно выполненных
+                    проекта
+                </div>
+                <div class="third-info-part i-part">320 спроектированых
+                    обьектов
+                </div>
+                <a href="#" class="bottom-scroll-wrap">
+                    <div class="arrow-shaft"></div>
+                    <!--<div class="arrow-head"></div>-->
+                </a>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                // center: true,
+                items: 1,
+                loop: true,
+                autoplay: false,
+                dots: false,
+                lazyLoad: true,
+                animateOut: 'fadeOut',
+                // responsive: true,
+                // autoplayTimeout: 3000,
+                onInitialized: counter,
+                onTranslated: counter
+
+            });
+        });
+
+        function counter(event) {
+            var items     = event.item.count;
+            var item      = event.item.index - 1;
+
+            // it loop is true then reset counter from 1
+            if(item > items) {
+                item = item - items
+            }
+            setProgress(item, items);
+        }
+        $(document).on('click', '.count-progr-sec', function () {
+            var item = 1 * $('.counter .current').html() + 1;
+            var items = 1 * $('.counter .total .value').html();
+
+            if(item > items) {
+                item = item - items
+            }
+            $('.owl-nav > button.owl-next').trigger('click');
+            setProgress(item, items);
+        });
+
+        function setProgress(item, items) {
+            $('.counter').html('<span class="current">0' + item + '</span><span class="total"> / <span class="value">0' + items + '</span></span>');
+            var percent = (100) * item / items;
+            $('.progressbar').css({background: 'linear-gradient(to right, #FF0000 ' + percent + '%, #ffffff ' + percent + '%)'});
+        }
+    </script>
+</body>
+</html>

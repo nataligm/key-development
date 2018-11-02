@@ -1,0 +1,290 @@
+body
+ overflow-y: hidden
+.main-display
+  box-sizing: border-box
+  color: #FFFFFF
+  .header
+    background-color: #181818
+    display: flex
+    justify-content: center
+    padding: 34px 0 39px
+    position: relative
+    .header-content
+      display: flex
+      max-width: 1764px
+      justify-content: center
+      .branding
+        //to set max-width: 120px when fonts are applied
+        border: 1px solid #000000
+        display: flex
+        margin-right: 780px
+        .logo-img
+          max-width: 40px
+          margin-right: 12px
+        .logo-link
+          font-family: CirceExtraBold, sans-serif
+          font-size: 25px
+          padding-top: 4px
+          span
+            font-size: 20px
+            font-weight: 800
+            &:nth-child(2)
+              font-family: CirceRegular, sans-serif
+              font-weight: 400
+
+      .about-contacts
+        font-family: CirceBold, sans-serif
+        display: flex
+        justify-content: space-between
+        width: 220px
+        font-size: 14px
+        font-weight: 700
+        margin-right: 385px
+        letter-spacing: 0.7px
+        align-items: flex-start
+        line-height: 45px
+      .burger-m-language
+        text-transform: uppercase
+        font-family: CirceRegular, sans-serif
+
+        .burger-menu
+          font-size: 14px
+          letter-spacing: 1.4px
+          display: flex
+          position: relative
+          flex-direction: column
+          width: 55px
+          padding-left: 39px
+
+          #check-menu
+            display: none
+          .navigation
+            visibility: hidden
+            opacity: 0
+            order: 3
+            position: absolute
+            top: 84px
+            width: 193px
+            left: -18px
+            z-index: 10
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+            transition: .5s all
+            //padding-left: 11px
+            .nav-link
+              display: block
+              text-align: center
+              padding-top: 20px
+              &:last-child
+                padding-bottom: 20px
+          .burger-line
+            width: 29px
+            height: 2px
+            background-color: #FFFFFF
+            position: absolute
+            left: 0
+            top: 18px
+            transition: .5s all
+          .second-l
+            top: 24px
+          .third-l
+            top: 24px
+          .burger-label
+            max-width: 50px
+            line-height: 45px
+
+          #check-menu:checked ~ .navigation
+            visibility: visible
+            opacity: 1
+          #check-menu:checked ~ .first-l
+            display: none
+          #check-menu:checked ~ .second-l
+            transform: rotate(-45deg)
+          #check-menu:checked ~ .third-l
+            transform: rotate(45deg)
+  .main
+    .slider-section
+      //padding-right: 80px
+      .slide-item
+        background-color: #181818
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 93%
+
+        .item-caption
+          padding-top: 290px
+          padding-bottom: 450px
+          padding-left: 340px
+          padding-right: 344px
+          //width: 886px
+          display: flex
+          justify-content: space-between
+
+          .count-progr-sec
+            width: 113px
+            cursor: pointer
+            border: 1px solid #FFFFFF
+            .counter
+              font-family: Bahnschrift, sans-serif
+              font-weight: 700
+              font-size: 48px
+              .total
+                font-size: 16px
+                vertical-align: super
+
+          .main-content
+            //max-width: 516px
+            //has to be 516px but it doesn't contain .tagline
+            div:first-child
+              font-family: CirceRegular, sans-serif
+              font-size: 22px
+              letter-spacing: 0.5px
+              margin-bottom: 30px
+            .tagline
+              font-family: CirceExtraBold, sans-serif
+              font-size: 48px
+              font-weight: 700
+              line-height: 60px
+              text-transform: uppercase
+              letter-spacing: 1.5px
+              max-width: 516px
+          .progressbar
+            width: 65px
+            height: 2px
+            background: linear-gradient(to right, #FF0000 75%, #ffffff 75%)
+
+          //#progressbar-1
+          //  width: 64px
+          //  border-radius: 10px
+          //  background-color: #FFFFFF
+          //  #progress-line-1
+          //    width: 1%
+          //    height: 10px
+          //    background-color: #ff2323
+    .icon-bar
+      width: 80px
+      height: 100%
+      position: fixed
+      right: 0
+      top: 116px
+      z-index: 8
+      background-color: #181818
+      padding-top: 335px
+      display: flex
+      flex-direction: column
+
+      .socials
+        font-family: CirceRegular, sans-serif
+        font-size: 14px
+        letter-spacing: 1.05px
+        transform: rotate(90deg)
+        display: flex
+        width: 145px
+        align-self: center
+        -webkit-transform: rotate(90deg)
+        -ms-transform: rotate(90deg)
+        justify-content: space-between
+        a
+          display: inline-block
+
+  // *********** ICON-BAR for a responsive**********************F*
+  //.icon-bar
+  //  border: 1px solid yellow
+  //  background-color: green
+  //  display: flex
+  //  justify-content: center
+  //  padding: 30px 0
+  //  .socials
+  //    width: 145px
+  //    display: flex
+  //    justify-content: space-between
+  //    border: 1px solid yellow
+  // *********** end of an ICON-BAR for the responsive***********************
+  .animation-block
+    color: black
+    width: 1455px
+    background-color: #ffffff
+    //display: none
+    //padding: 55px 0 47px 120px
+    padding: 49px 0 41px 120px
+    position: fixed
+    right: 0
+    z-index: 10
+    bottom: 0
+    -webkit-animation: 'animate' 1s 1s ease backwards
+    //-moz-animation: 'animate' 2s linear backwards
+    //-o-animation: 'animate' 2s linear backwards
+    //animation: 'animate' 2s linear backwards
+    .i-part
+
+    .info-section
+      width: 1040px
+      display: flex
+      justify-content: space-between
+      .first-info-part
+        text-transform: uppercase
+        font-weight: 700
+        font-size: 14px
+        opacity: 0
+        font-family: "Bahnschrift",sans-serif
+        letter-spacing: 0.7px
+        -webkit-animation: 'animate2' 0.4s 2s linear forwards
+
+
+      .second-info-part,
+      .third-info-part
+        font-family: "ProximaNovaThin", sans-serif
+        font-size: 14px
+        opacity: 0
+        //line-height: 18px
+      .second-info-part
+        max-width: 177px
+        -webkit-animation: 'animate2' 0.4s 2.3s linear forwards
+      .third-info-part
+        max-width: 143px
+        -webkit-animation: 'animate2' 0.4s 2.6s linear forwards
+      .bottom-scroll-wrap
+        display: block
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background-color: #ff2323
+        cursor: pointer
+        -webkit-animation: 'animate2' 0.4s 2.9s linear forwards
+        opacity: 0
+
+        .arrow-shaft
+          width: 2px
+          height: 17px
+          background-color: #fff
+          margin: 0 auto
+          position: relative
+          top: 15px
+
+          &:after
+            content: ''
+            border: solid #fff
+            border-width: 0 2px 2px 0
+            display: inline-block
+            padding: 3px
+            -webkit-transform: rotate(45deg)
+            transform: rotate(45deg)
+            position: absolute
+            right: -3px
+            top: 10px
+@keyframes animate
+  0%
+    transform: scaleX(0)
+    transform-origin: right
+
+  100%
+    transform: scaleX(1)
+    transform-origin: right
+@keyframes animate2
+  0%
+    opacity: 0
+    transform: translateX(-10px)
+  100%
+    opacity: 1
+    transform: translateX(10px)
+    transform-origin: left
+
