@@ -14,7 +14,6 @@ body
       max-width: 1764px
       justify-content: center
       .branding
-        //to set max-width: 120px when fonts are applied
         border: 1px solid #000000
         display: flex
         margin-right: 780px
@@ -69,7 +68,7 @@ body
             z-index: 10
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))
             transition: .5s all
-            //padding-left: 11px
+
             .nav-link
               display: block
               text-align: center
@@ -103,7 +102,7 @@ body
             transform: rotate(45deg)
   .main
     .slider-section
-      //padding-right: 80px
+
       .slide-item
         background-color: #181818
         background-repeat: no-repeat
@@ -115,25 +114,22 @@ body
           padding-bottom: 450px
           padding-left: 340px
           padding-right: 344px
-          //width: 886px
           display: flex
           justify-content: space-between
 
           .count-progr-sec
             width: 113px
             cursor: pointer
-            border: 1px solid #FFFFFF
             .counter
               font-family: Bahnschrift, sans-serif
               font-weight: 700
               font-size: 48px
+              margin-bottom: 164px
               .total
                 font-size: 16px
                 vertical-align: super
 
           .main-content
-            //max-width: 516px
-            //has to be 516px but it doesn't contain .tagline
             div:first-child
               font-family: CirceRegular, sans-serif
               font-size: 22px
@@ -147,19 +143,23 @@ body
               text-transform: uppercase
               letter-spacing: 1.5px
               max-width: 516px
+              position: relative
+              z-index: 1
+              &:before
+                background: url(../images/bg/tagline-img.png) no-repeat
+                content: ''
+                position: absolute
+                top: 0
+                left: -93px
+                width: 224px
+                height: 100%
+                z-index: -1
+
           .progressbar
             width: 65px
             height: 2px
             background: linear-gradient(to right, #FF0000 75%, #ffffff 75%)
 
-          //#progressbar-1
-          //  width: 64px
-          //  border-radius: 10px
-          //  background-color: #FFFFFF
-          //  #progress-line-1
-          //    width: 1%
-          //    height: 10px
-          //    background-color: #ff2323
     .icon-bar
       width: 80px
       height: 100%
@@ -211,10 +211,9 @@ body
     z-index: 10
     bottom: 0
     -webkit-animation: 'animate' 1s 1s ease backwards
-    //-moz-animation: 'animate' 2s linear backwards
-    //-o-animation: 'animate' 2s linear backwards
-    //animation: 'animate' 2s linear backwards
-    .i-part
+    -moz-animation: 'animate' 2s linear backwards
+    -o-animation: 'animate' 2s linear backwards
+    animation: 'animate' 2s linear backwards
 
     .info-section
       width: 1040px
@@ -235,7 +234,7 @@ body
         font-family: "ProximaNovaThin", sans-serif
         font-size: 14px
         opacity: 0
-        //line-height: 18px
+
       .second-info-part
         max-width: 177px
         -webkit-animation: 'animate2' 0.4s 2.3s linear forwards
