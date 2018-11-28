@@ -5,7 +5,6 @@
 <body>
     @@include('../templates/main_display.html')
 
-
     <script src="/js/jquery.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
 
@@ -19,8 +18,8 @@
                 dots: false,
                 lazyLoad: true,
                 animateOut: 'fadeOut',
-                // responsive: true,
-                // autoplayTimeout: 3000,
+                responsive: true,
+                autoplayTimeout: 3000,
                 onInitialized: counter,
                 onTranslated: counter
 
@@ -53,6 +52,24 @@
             var percent = (100) * item / items;
             $('.progressbar').css({background: 'linear-gradient(to right, #FF0000 ' + percent + '%, #ffffff ' + percent + '%)'});
         }
+
+        //Handling of click outside of language selector - for hiding drop-down language menu
+        $(document).on("click", function(event) {
+            //Get event target
+            var clickTarget = event.target;
+            //In case if click wasn't in language selector container or if click wasn't on some of language selector container children
+            if (!$(".language-select").is(clickTarget) && $(".language-select").has(clickTarget).length === 0) {
+                $(".select-lang-list").hide();
+            }
+        });
+
+        $(document).on("click", ".language-select", function() {
+            if ($(".select-lang-list").is(":hidden")) {
+                $(".select-lang-list").show();
+            } else {
+                $(".select-lang-list").hide();
+            }
+        });
     </script>
 </body>
 </html>
